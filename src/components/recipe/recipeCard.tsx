@@ -50,6 +50,22 @@ export const RecipeCard = ({
                 <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors">
                   {recipe.title}
                 </h3>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={`${
+                    isFavorite ? "text-orange-500" : "text-gray-400"
+                  } hover:bg-orange-50`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onFavoriteToggle(recipe.id);
+                  }}
+                >
+                  <Heart
+                    className="w-5 h-5"
+                    fill={isFavorite ? "currentColor" : "none"}
+                  />
+                </Button>
               </div>
 
               <div className="flex gap-6">
