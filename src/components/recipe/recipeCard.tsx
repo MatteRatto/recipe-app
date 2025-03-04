@@ -27,6 +27,12 @@ export const RecipeCard = ({
     </div>
   );
 
+  const handleFavoriteClick = (e: React.MouseEvent, id: number) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onFavoriteToggle(id);
+  };
+
   if (view === "list") {
     return (
       <Card className="group relative h-[260px] overflow-hidden hover:shadow-xl transition-all duration-300 border-orange-100/50">
@@ -55,11 +61,8 @@ export const RecipeCard = ({
                   size="icon"
                   className={`${
                     isFavorite ? "text-orange-500" : "text-gray-400"
-                  } hover:bg-orange-50`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onFavoriteToggle(recipe.id);
-                  }}
+                  } hover:bg-orange-50 z-10`}
+                  onClick={(e) => handleFavoriteClick(e, recipe.id)}
                 >
                   <Heart
                     className="w-5 h-5"
@@ -115,6 +118,10 @@ export const RecipeCard = ({
                 variant="ghost"
                 size="sm"
                 className="text-orange-500 hover:text-orange-600 hover:bg-orange-50"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onRecipeClick(recipe.id);
+                }}
               >
                 View Recipe
                 <BookOpen className="w-4 h-4 ml-2" />
@@ -140,12 +147,9 @@ export const RecipeCard = ({
         <Button
           variant="ghost"
           size="icon"
-          className={`absolute top-4 right-4 bg-white/90 hover:bg-white shadow-lg
+          className={`absolute top-4 right-4 bg-white/90 hover:bg-white shadow-lg z-10
                      ${isFavorite ? "text-orange-500" : "text-gray-400"}`}
-          onClick={(e) => {
-            e.stopPropagation();
-            onFavoriteToggle(recipe.id);
-          }}
+          onClick={(e) => handleFavoriteClick(e, recipe.id)}
         >
           <Heart
             className="w-5 h-5"
