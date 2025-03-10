@@ -2,6 +2,10 @@
 
 A modern, interactive recipe search and discovery application built with React. This application allows users to find and explore recipes based on various criteria.
 
+## Live Demo
+
+Check out the live version of this app at: [Recipe App on Netlify](https://imaginative-donut-467db0.netlify.app/)
+
 ## Key Features
 
 - **Recipe Search**: Find recipes using keywords, ingredients, or meal types
@@ -46,6 +50,7 @@ A modal dialog showing complete recipe information:
 - **Lucide React**: For beautiful icons
 - **Tailwind CSS**: For styling with utility classes
 - **shadcn/ui**: For consistent UI components
+- **Netlify**: For hosting and continuous deployment
 
 ## Getting Started
 
