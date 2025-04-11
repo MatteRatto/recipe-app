@@ -1,17 +1,9 @@
 import React from "react";
 import { Clock, Users, Heart, BookOpen, DollarSign } from "lucide-react";
-import { Recipe } from "../../types/recipe";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-
-interface RecipeCardProps {
-  recipe: Recipe;
-  isFavorite: boolean;
-  onFavoriteToggle: (id: number) => void;
-  onRecipeClick: (id: number) => void;
-  view?: "grid" | "list";
-}
+import { RecipeCardProps } from "../../types/recipeTypes";
 
 export const RecipeCard = ({
   recipe,

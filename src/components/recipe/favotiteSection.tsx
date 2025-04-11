@@ -1,13 +1,7 @@
 import React from "react";
 import { Heart } from "lucide-react";
-import { Recipe } from "../../types/recipe";
 import { RecipeCard } from "./recipeCard";
-
-interface FavoritesSectionProps {
-  favoriteRecipes: Recipe[];
-  onFavoriteToggle: (id: number) => void;
-  onRecipeClick: (id: number) => void;
-}
+import { FavoritesSectionProps } from "../../types/recipeTypes";
 
 export const FavoritesSection: React.FC<FavoritesSectionProps> = ({
   favoriteRecipes,

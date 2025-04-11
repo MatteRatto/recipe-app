@@ -8,7 +8,7 @@ import {
   Pizza,
   Cake,
 } from "lucide-react";
-import { FloatingIconProps } from "./types/headerTypes";
+import { FloatingIconProps } from "../types/headerTypes";
 
 const BouncingIcon = ({ Icon, initialPosition, speed }: FloatingIconProps) => {
   const iconRef = useRef<HTMLDivElement>(null);

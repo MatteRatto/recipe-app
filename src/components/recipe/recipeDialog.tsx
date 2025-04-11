@@ -10,14 +10,7 @@ import { Badge } from "../ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 import { Button } from "../ui/button";
 import { ScrollArea } from "../ui/scrollArea";
-
-interface RecipeDialogProps {
-  recipe: any;
-  isOpen: boolean;
-  onClose: () => void;
-  isFavorite?: boolean;
-  onFavoriteToggle?: (id: number) => void;
-}
+import { RecipeDialogProps } from "../../types/recipeTypes";
 
 export const RecipeDialog = ({
   recipe,

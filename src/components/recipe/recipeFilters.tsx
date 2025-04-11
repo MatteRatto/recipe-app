@@ -1,6 +1,5 @@
 import { Search, Filter, ChefHat, Utensils } from "lucide-react";
 import { Input } from "../ui/input";
-import { RecipeFilters } from "../../types/recipe";
 import {
   Select,
   SelectContent,
@@ -9,13 +8,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import { Button } from "../ui/button";
-
-interface RecipeFilterProps {
-  filters: RecipeFilters;
-  onFilterChange: (key: keyof RecipeFilters, value: string) => void;
-  onSearch: () => void;
-  isLoading: boolean;
-}
+import { RecipeFilterProps } from "../../types/recipeTypes";
 
 const cuisineTypes = [
   "All",
